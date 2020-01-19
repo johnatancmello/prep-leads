@@ -1,0 +1,12 @@
+<div class="form content">
+  <div class="form__content">
+    <div class="form__content__box">
+      <app-interesse-table
+        [interesses]="interesses"
+        [filter]="filter"
+        (changePage)="changePage($event)"
+        (openDialogDetails)="switchMotor($event)">
+      </app-interesse-table>
+    </div>
+  </div>
+</div>

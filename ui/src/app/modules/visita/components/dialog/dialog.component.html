@@ -1,0 +1,46 @@
+<div class="content-sheet mat-primary-light">
+
+  <app-shared-select class="tipo-select"
+    ngDefaultControl
+    [placeholder]="'Status'"
+    [(ngModel)]="visita.status"
+    [items]="status"
+    [readonly]="readonly">
+  </app-shared-select>
+
+  <app-shared-date
+    ngDefaultControl
+    *ngIf="visibleDateField()"
+    [readonly]="readonly"
+    [selectMode]="'single'"
+    [readonly]="false"
+    [pickerMode]="'dialog'"
+    [pickerType]="'both'"
+    [placeholder]="'Data do Agendamento'"
+    [(ngModel)]="visita.dataDoAgendamento">
+  </app-shared-date>
+
+  <app-shared-text-area
+    ngDefaultControl
+    [placeholder]="'Observação'"
+    [(ngModel)]="visita.observacao"
+    [readonly]="readonly">
+  </app-shared-text-area>
+
+  <div class="sheet__button-content">
+
+    <button mat-flat-button
+      (click)="limpar($event)"
+      *ngIf="!readonly">
+      <i class="material-icons">delete</i>
+    </button>
+
+    <button mat-flat-button
+      (click)="aterarSavar()"
+      *ngIf="visita.dataDoAgendamento">
+      <i class="material-icons">{{getTextAlterarSalvar()}}</i>
+    </button>
+
+  </div>
+
+</div>

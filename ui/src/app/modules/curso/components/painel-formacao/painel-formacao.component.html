@@ -1,0 +1,29 @@
+<div class="content">
+
+  <div class="flex-row p-grid primary-dark  ">
+
+    <div class="content__celula p-col-6 p-sm-4 p-md-4 p-lg-4 p-xl-4 p-grid primary-dark--active--hover"
+      *ngFor="let item of areas">
+      <div class="content__celula__content" (click)="clickArea(item)">
+        <label class="titulo">{{item.nome}}</label>
+      </div>
+    </div>
+
+    <div class="content__celula p-col-6 p-sm-4 p-md-4 p-lg-4 p-xl-4 primary-dark--active--hover"
+      *ngFor="let item of formacoes">
+      <div class="content__celula__content" (click)="clickFormacao(item)">
+        <label class="titulo">{{item.nome}}</label>
+      </div>
+    </div>
+
+  </div>
+
+  <app-shared-speed-dial-fab
+    class="speed-dial-container mat-comp-primary-dark"
+    [ngClass]="SpeedDialFabPosition.Bottom"
+    [reverseColumnDirection]="true"
+    [fabButtons]="speedDialFabButtons"
+    (fabClick)="fabClick($event)">
+  </app-shared-speed-dial-fab>
+</div>
+

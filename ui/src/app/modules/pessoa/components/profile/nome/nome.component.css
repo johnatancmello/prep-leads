@@ -1,0 +1,21 @@
+.content{
+  display: block;
+  padding: 25px 0;
+  background-color: #fff;
+}
+
+.nome{
+  display: block;
+  text-align: center;
+  font-size: 1.6em;
+  font-family: -apple-system,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  Roboto,
+  Oxygen,
+  Ubuntu,
+  Cantarell,
+  'Open Sans',
+  'Helvetica Neue',
+  sans-serif;
+}

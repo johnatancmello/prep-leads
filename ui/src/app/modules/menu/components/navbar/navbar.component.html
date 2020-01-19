@@ -1,0 +1,38 @@
+<mat-progress-bar class="mat-comp-primary-dark" mode="indeterminate" *ngIf="navBarService.loading">
+</mat-progress-bar>
+
+<!--
+<nav class="navbar primary-dark--active animated" [ngClass]="class">
+
+  <div class="navbar__itens">
+    <label class="itens__sauldacao">
+      {{getSaldacao()}}
+      <strong class="sauldacao__nome">{{getNomeUsuario()}}</strong>
+    </label>
+
+  </div>
+
+
+  <label>{{getTitle()}}</label>
+
+
+
+  <i class="material-icons navbar__burguer" (click)="burguerToggler()">menu</i>
+
+</nav>
+--->
+
+<nav class="primary-dark--active">
+
+  <i class="material-icons burgue" (click)="burguerToggler()">menu</i>
+
+  <label class="titulo" (click)="burguerToggler()">{{getTitle()}}</label>
+
+  <div class="right">
+    <label class="saldacao">{{getSaldacao()}} </label>
+    <label class="nome">{{getNomeUsuario()}}</label>
+  </div>
+
+
+
+</nav>

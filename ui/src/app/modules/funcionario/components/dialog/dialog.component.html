@@ -1,0 +1,43 @@
+<div class="dialog primary-light-fundo">
+
+  <div class="dialog__content">
+
+    <app-pessoa-profile-imagem
+      [imagem]="funcionario.pessoa.imagem"
+      [readonly]="readonly"
+      (closeEvent)="close()"
+      (editEvent)="togglerEdit($event)"
+      (newImagem)="refreshImagem($event)"
+      (deleteEvent)="delete($event)">
+    </app-pessoa-profile-imagem>
+
+    <app-pessoa-id-status
+      [(pessoa)]="funcionario"
+      [readonly]="readonly">
+    </app-pessoa-id-status>
+
+    <app-pessoa-profile-nome
+      [(pessoa)]="funcionario.pessoa"
+      [readonly]="readonly">
+    </app-pessoa-profile-nome>
+
+      <mat-tab-group class="tab" mat-align-tabs="center">
+
+        <mat-tab label="Geral">
+          <app-pessoa-form-full
+            [(pessoa)]="funcionario.pessoa"
+            [readonly]="readonly">
+          </app-pessoa-form-full>
+        </mat-tab>
+
+        <mat-tab label="Funcionario">
+          <app-funcionario-form-full
+            [(funcionario)]="funcionario"
+            [readonly]="readonly">
+          </app-funcionario-form-full>
+        </mat-tab>
+
+      </mat-tab-group>
+
+  </div>
+</div>

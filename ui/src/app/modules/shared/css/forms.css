@@ -1,0 +1,43 @@
+/*--------------------------*\
+componetes pessoais
+FORM-BOX
+\*--------------------------*/
+.form {
+  background-color: transparent; /*f4f3f1*/
+  padding-top: 5.5px;
+  padding-bottom: 5.5px;
+}
+
+.form__content{
+  padding-left: 10px;
+}
+
+.form__content:first-of-type{
+  padding-left: 0px;
+}
+
+.form__content__box {
+  display: block;
+  padding: 20px;
+  background-color: #fff;
+  font-size: 1.2em;
+}
+
+
+@media(max-width: 766px) {
+  .form__content {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+  .form {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+}
+
+/*--------------------------*\
+componetes pessoais
+FORM-BOX
+\*--------------------------*/

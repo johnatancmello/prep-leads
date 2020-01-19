@@ -1,0 +1,15 @@
+<div class="cabecalho">
+
+    <div class="column left">
+      <label class="date">{{ date | date: "d MMM/yy" }}</label>
+    </div>
+
+    <div class="column center primary-light--text">
+      <label class="title">{{title}}</label>
+    </div>
+
+    <div class="column right">
+      <label class="clean" *ngIf="clear" (click)="clean.emit()">x</label>
+    </div>
+
+</div>

@@ -1,0 +1,39 @@
+<div class="separador"
+  *ngIf="((telefones) && (telefones.length !== 0)) || (!readonly)">
+  <i class="material-icons">phone</i>
+</div>
+
+
+<div class="list p-grid"
+  *ngFor="let item of telefones; let i = index; trackBy:trackByFn;">
+
+  <app-shared-tel
+    #fone
+    class="list__item p-col-6 p-sm-6 p-md-6 p-lg-6 p-xl-6"
+    ngDefaultControl
+    [placeholder]="'Fone ' + (i+1)"
+    [(ngModel)]="item.telefone"
+    [readonly]="readonly">
+  </app-shared-tel>
+
+  <app-shared-input
+    class="list__item p-col-6 p-sm-6 p-md-6 p-lg-6 p-xl-6"
+    ngDefaultControl
+    [placeholder]="'Tipo'"
+    [(ngModel)]="item.tipo"
+    [readonly]="readonly">
+  </app-shared-input>
+
+  <div class="list_item ">
+    <label class="excluir"
+    *ngIf="!readonly"
+      (click)="removeFone(i)">x</label>
+  </div>
+
+</div>
+
+<div class="button primary-light--hover"
+  *ngIf="!readonly"
+  (click)="addFone()">
+  <i class="material-icons">add</i>
+</div>

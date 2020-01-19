@@ -1,0 +1,30 @@
+@mixin mat-list-theme($theme) {
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  .mat-list-base {
+    .mat-list-item {
+      color: mat-color($foreground, text);
+    }
+
+    .mat-list-option {
+      color: mat-color($foreground, text);
+    }
+
+    .mat-subheader {
+      color: mat-color($foreground, secondary-text);
+    }
+  }
+
+  /*.mat-list-item-disabled {
+    background-color: mat-color($background, disabled-list-option);
+  }*/
+
+  .mat-list-option,
+  .mat-nav-list .mat-list-item,
+  .mat-action-list .mat-list-item {
+    &:hover, &:focus {
+      background: mat-color($background, 'hover');
+    }
+  }
+}

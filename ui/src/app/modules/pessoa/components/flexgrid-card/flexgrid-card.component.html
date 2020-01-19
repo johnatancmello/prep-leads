@@ -1,0 +1,27 @@
+<div class="mat-primary-light">
+  <div class="content p-grid">
+
+    <app-pessoa-card
+      class="celula p-col-12 p-sm-6 p-md-4 p-lg-3 p-xl-2"
+      *ngFor="let p of pessoas"
+      [pessoa]="p"
+      [imagemPadrao]="'assets/img/svg-24/baseline-person-24px.svg'"
+      (click)="openCard.emit(p)">
+    </app-pessoa-card>
+
+    <app-pessoa-card
+      class="celula p-col-12 p-sm-6 p-md-4 p-lg-3 p-xl-2"
+      [pessoa]="getNewPessoa()"
+      [imagemPadrao]="'assets/img/svg-24/baseline-add-24px.svg'"
+      (click)="openCard.emit(null)">
+    </app-pessoa-card>
+
+  </div>
+  <mat-paginator
+    [length]="filter.totalRecords"
+    [pageSize]="filter.itensForPage"
+    [pageSizeOptions]="[7, 11, 15, 19]"
+    (page)="changePage.emit($event)">
+  </mat-paginator>
+</div>
+

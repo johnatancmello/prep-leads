@@ -1,0 +1,73 @@
+<div class="dialog primary-light-fundo">
+
+  <div class="dialog__content">
+
+    <app-pessoa-profile-imagem
+      [imagem]="aluno.pessoa.imagem"
+      [readonly]="readonly"
+      (closeEvent)="close()"
+      (editEvent)="togglerEdit($event)"
+      (newImagem)="refreshImagem($event)"
+      (deleteEvent)="delete($event)">
+    </app-pessoa-profile-imagem>
+
+    <app-pessoa-id-status
+      [(pessoa)]="aluno"
+      [readonly]="readonly">
+    </app-pessoa-id-status>
+
+    <app-pessoa-profile-nome
+      [(pessoa)]="aluno.pessoa"
+      [readonly]="readonly">
+    </app-pessoa-profile-nome>
+
+    <mat-tab-group mat-align-tabs="center"
+      [selectedIndex]="getIndexPrimaryTab()">
+
+      <mat-tab label="Geral">
+        <app-pessoa-form-full
+          [(pessoa)]="aluno.pessoa"
+          [readonly]="readonly">
+        </app-pessoa-form-full>
+      </mat-tab>
+
+      <mat-tab label="Prospect" [disabled]="!aluno.id">
+
+        <mat-tab-group mat-align-tabs="center" class="secundary-tab"
+          [selectedIndex]="getIndexSecundaryTab()">
+
+          <mat-tab label="Interesses" [disabled]="!aluno.id">
+            <app-pessoa-interesse
+              [idInteresseSelecionado]="data.idInteresseSelecionado"
+              [idPessoa]="getIdPessoa()"
+              [(pessoa)]="aluno.pessoa">
+            </app-pessoa-interesse>
+          </mat-tab>
+
+          <mat-tab label="Contatos" [disabled]="!aluno.id">
+            <app-pessoa-contato
+              [idContatoSelecionado]="data.idContatoSelecionado"
+              [idPessoa]="getIdPessoa()"
+              [(pessoa)]="aluno.pessoa">
+            </app-pessoa-contato>
+          </mat-tab>
+
+          <mat-tab label="Visitas" [disabled]="!aluno.id">
+            <app-pessoa-visita
+              [idVisitaSelecionado]="data.idVisitaSelecionado"
+              [idPessoa]="getIdPessoa()"
+              [(pessoa)]="aluno.pessoa">
+            </app-pessoa-visita>
+          </mat-tab>
+
+        </mat-tab-group>
+
+      </mat-tab>
+
+      <mat-tab label="Aluno" [disabled]="!aluno.id">
+      </mat-tab>
+
+    </mat-tab-group>
+
+  </div>
+</div>

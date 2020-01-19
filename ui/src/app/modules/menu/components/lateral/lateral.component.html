@@ -1,0 +1,11 @@
+<div class="menu-lateral animated"
+  [ngClass]="classLateralBar">
+  <app-menu-lateral-itens
+    (closeLateral)="closeLateral.emit($event)">
+  </app-menu-lateral-itens>
+</div>
+
+<div class="menu-contra animated"
+  [ngClass]="classContraBar"
+  (click)="closeLateral.emit();">
+</div>

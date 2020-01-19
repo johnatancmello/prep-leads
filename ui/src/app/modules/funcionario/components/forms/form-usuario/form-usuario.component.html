@@ -1,0 +1,24 @@
+<div class="p-grid">
+
+  <app-shared-form-title
+    class="p-col-12 p-sm-12 p-md-12 p-lg-12 p-xl-12"
+    [title]="'Usuario'">
+  </app-shared-form-title>
+
+  <app-shared-input class="p-col-12 p-sm-12 p-md-6 p-lg-6 p-xl-6"
+    ngDefaultControl
+    [placeholder]="'Usuario'"
+    [(ngModel)]="usuario.idUsuario"
+    [readonly]="readonly">
+  </app-shared-input>
+
+  <app-shared-input class="p-col-12 p-sm-12 p-md-6 p-lg-6 p-xl-6"
+    matTooltip="Por segurança, não é exibido!"
+    ngDefaultControl
+    [placeholder]="'Senha'"
+    [(ngModel)]="usuario.senha"
+    [readonly]="readonly"
+    [type]="'password'">
+  </app-shared-input>
+
+</div>

@@ -1,0 +1,27 @@
+<div class="content">
+  <h3 mat-dialog-title>
+    Carregar foto
+  </h3>
+
+  <mat-dialog-content class="mat-typography">
+
+    <input #input id="custom-input" type="file" (change)="fileChangeListener($event)" hidden="true">
+
+    <img-cropper #cropper
+      class="cropper"
+      [image]="cropperData"
+      [settings]="cropperSettings">
+    </img-cropper>
+  <!---<span class="result rounded" *ngIf="cropperData.image" >
+    <img [src]="cropperData.image" [width]="cropperSettings.croppedWidth" [height]="cropperSettings.croppedHeight">
+  </span>-->
+
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="center">
+    <!--<button mat-button [mat-dialog-close]="null">Excluir</button>-->
+    <button mat-button cdkFocusInitial (click)="input.click($event)">Abrir</button>
+    <button mat-button mat-dialog-close>Cancelar</button>
+    <button mat-button [mat-dialog-close]="getImagem()" *ngIf="cropperData.image">Ok</button>
+  </mat-dialog-actions>
+</div>

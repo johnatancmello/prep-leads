@@ -1,0 +1,23 @@
+.field{
+  font-size: 1em;
+  width: 100%;
+}
+
+.field__input{
+  font-size: 1em;
+  line-height: 1em;
+}
+
+.field__label{
+  box-sizing: content-box;
+  display: block;
+  font-weight: 400;
+  line-height: 1.125;
+  text-align: left;
+  font-size: 0.83em;
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+}
+
+.readonly{
+  pointer-events: none;
+}

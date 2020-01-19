@@ -1,0 +1,64 @@
+<div class="content-sheet mat-primary-light">
+
+  <app-shared-select class="tipo-select"
+    ngDefaultControl
+    *ngIf="!readonly"
+    [placeholder]="'Tipo'"
+    [(ngModel)]="interesse.tipo"
+    [items]="tipos"
+    [readonly]="readonly">
+  </app-shared-select>
+
+  <mat-selection-list #shoes class="modulos-content"
+    [(ngModel)]="modulosPersonalizados"
+    [disabled]="readonly"
+    [disableRipple]="false"
+    (ngModelChange)="onNgModelChange(shoes)">
+
+    <mat-list-option
+      *ngFor="let modulo of interesse.modulos"
+      [selected]="true" [value]="modulo" >
+      {{modulo.nome}}
+    </mat-list-option>
+
+  </mat-selection-list>
+
+  <div class="sheet__button-content">
+
+    <button mat-flat-button
+      (click)="limpar($event)"
+      *ngIf="hasModulos() && !readonly">
+      <i class="material-icons">delete</i>
+    </button>
+
+    <button mat-flat-button
+      color=""
+      *ngIf="!readonly"
+      (click)="openDialogFormacoes($event)"
+      cdkFocusInitial>
+      <i class="material-icons">school</i>
+    </button>
+
+    <button mat-flat-button
+      color=""
+      *ngIf="readonly"
+      (click)="openDialogContato()"
+      cdkFocusInitial>
+      <i class="material-icons">phone_in_talk</i>
+    </button>
+
+
+    <!--<button mat-flat-button
+      (click)="close()">
+      Cancelar
+    </button>-->
+
+    <button mat-flat-button
+      (click)="aterarSavar()"
+      *ngIf="hasTipo() && hasModulos()">
+      <i class="material-icons">{{getTextAlterarSalvar()}}</i>
+    </button>
+
+  </div>
+
+</div>

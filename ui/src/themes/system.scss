@@ -1,0 +1,108 @@
+/* light */
+.mat-primary-light{
+  @include angular-material-theme($my-theme);
+}
+
+.mat-primary-light--hover:hover{
+  @include angular-material-theme($dark-theme);
+}
+
+.primary-light{
+  background-color: $branco;
+  color: $azul-50;
+}
+.primary-light--hover:hover{
+  background-color: $azul-50;
+  color: $branco;
+  cursor: pointer;
+}
+.primary-light--text{
+  background-color: $branco;
+  color: $azul-30;
+}
+.primary-light--text--hover:hover{
+  background-color: $azul-50;
+  color: $branco;
+  cursor: pointer;
+}
+.primary-light--active{
+  background-color: $azul-30;
+  color: $branco;
+}
+.primary-light--active--hover:hover{
+  background-color: $branco;
+  color: $azul-30;
+  cursor: pointer;
+}
+.primary-light-fundo{
+  background-image: linear-gradient(
+    to bottom,
+    rgb(180, 220, 235),
+    rgb(190, 223, 232),
+    rgb(200, 225, 233),
+    rgb(230, 245, 253)
+  )
+}
+
+/* DARK */
+.mat-primary-dark{
+  @include angular-material-theme($dark-theme);
+}
+.mat-primary-dark:hover{
+  @include angular-material-theme($my-theme);
+}
+.primary-dark{
+  background-color: $azul-50;
+  color: $branco;
+}
+.primary-dark--hover:hover{
+  background-color: $branco;
+  color: $azul-50;
+  cursor: pointer;
+}
+.primary-dark--text{
+  background-color: $azul-30;
+  color: $branco;
+}
+.primary-dark--text--hover:hover{
+  background-color: $branco;
+  color: $azul-50;
+}
+.primary-dark--active{
+  background-color: $azul-30;
+  color: $branco;
+}
+.primary-dark--active--hover:hover{
+  background-color: $azul-30;
+  color: $branco;
+  cursor: default;
+}
+
+
+/* SUPER-LIGHT */
+.mat-super-light{
+  @include angular-material-theme($super-light-theme);
+}
+
+/* COMP PRIMARY */
+.mat-comp-primary-light{
+  @include angular-material-theme($comp-azul-theme);
+}
+
+/* COMP PRIMARY */
+.mat-comp-primary-dark{
+  @include angular-material-theme($comp-azul-dark-theme);
+}
+
+/* DEFAULT */
+.default{
+  @include angular-material-theme($candy-app-theme);
+}
+.default-dark--text{
+  color: rgba(0, 0, 0, 0.75)
+}
+.default-light--text{
+  color: rgba(255, 255, 255, 0.75);
+}
+
+

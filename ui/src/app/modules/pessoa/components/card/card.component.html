@@ -1,0 +1,12 @@
+<div class="box">
+  <div class="figura">
+    <img class="imagem" [src]="getBase64()">
+  </div>
+  <div class="conteudo">
+    <label class="nome" *ngIf="pessoa.nome">{{pessoa.nome.split(' ')[0]}}</label>
+    <label class="descricao">
+      <label class="idade" *ngIf="pessoa.idade">{{pessoa.idade}} anos, </label>
+      <label class="ocupacao" *ngIf="pessoa.ocupacao">{{pessoa.ocupacao.split(' ')[0]}}</label>
+    </label>
+  </div>
+</div>

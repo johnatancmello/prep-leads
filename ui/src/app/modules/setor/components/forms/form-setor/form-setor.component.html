@@ -1,0 +1,15 @@
+<div class="p-grid">
+
+  <app-shared-form-title
+    class="p-col-12 p-sm-12 p-md-12 p-lg-12 p-xl-12"
+    [title]="'Setor'">
+  </app-shared-form-title>
+
+  <app-shared-select class="p-col-12 p-sm-12 p-md-12 p-lg-12 p-xl-12"
+    ngDefaultControl
+    [placeholder]="'Setor'"
+    [(ngModel)]="setor.id"
+    [items]="itens"
+    [readonly]="readonly">
+  </app-shared-select>
+</div>

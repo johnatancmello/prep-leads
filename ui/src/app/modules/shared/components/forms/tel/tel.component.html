@@ -1,0 +1,13 @@
+<mat-form-field class="field" [ngClass]="readonly ? 'readonly' : ''">
+  <input matInput
+    #input
+    class="field__input"
+    [type]="type"
+    autocomplete="off"
+    [placeholder]="placeholder"
+    [(ngModel)]="ngModel"
+    [readonly]="readonly"
+    (keydown.enter)="keydownEnter.emit($event)"
+    (ngModelChange)="applyMask(input)"
+    [maxlength]="15">
+</mat-form-field>

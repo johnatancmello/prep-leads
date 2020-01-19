@@ -1,0 +1,8 @@
+<div class="content">
+  <app-pessoa-flexgrid-card
+    [pessoas]="getPessoas()"
+    [filter]="filter"
+    (changePage)="changePage($event)"
+    (openCard)="openDialogFuncionario($event)">
+  </app-pessoa-flexgrid-card>
+</div>

@@ -1,0 +1,71 @@
+<div class="dialog primary-light-fundo">
+
+  <div class="dialog__content mat-primary-light">
+
+    <app-pessoa-profile-imagem
+      [(readonly)]="readonly"
+      [imagem]="getImagem()"
+      (closeEvent)="close()"
+      (editEvent)="togglerEdit($event)"
+      (newImagem)="refreshImagem($event)"
+      (deleteEvent)="delete($event)">
+    </app-pessoa-profile-imagem>
+
+    <app-pessoa-id-status
+      [(pessoa)]="pessoa"
+      [readonly]="readonly">
+    </app-pessoa-id-status>
+
+    <app-pessoa-profile-nome
+      [(pessoa)]="pessoa"
+      [readonly]="readonly">
+    </app-pessoa-profile-nome>
+
+    <mat-tab-group mat-align-tabs="center"
+      [selectedIndex]="getIndexPrimaryTab()">
+
+      <mat-tab label="Geral">
+        <app-pessoa-form-full
+          [(pessoa)]="pessoa"
+          [readonly]="readonly">
+        </app-pessoa-form-full>
+      </mat-tab>
+
+
+      <mat-tab label="Prospect" [disabled]="!pessoa.id">
+
+        <mat-tab-group mat-align-tabs="center" class="secundary-tab"
+          [selectedIndex]="getIndexSecundaryTab()">
+
+          <mat-tab label="Interesses" [disabled]="!pessoa.id">
+            <app-pessoa-interesse
+              [idInteresseSelecionado]="data.idInteresseSelecionado"
+              [idPessoa]="getIdPessoa()"
+              [(pessoa)]="pessoa">
+            </app-pessoa-interesse>
+          </mat-tab>
+
+          <mat-tab label="Contatos" [disabled]="!pessoa.id">
+            <app-pessoa-contato
+              [idContatoSelecionado]="data.idContatoSelecionado"
+              [idPessoa]="getIdPessoa()"
+              [(pessoa)]="pessoa">
+            </app-pessoa-contato>
+          </mat-tab>
+
+          <mat-tab label="Visitas" [disabled]="!pessoa.id">
+            <app-pessoa-visita
+              [idVisitaSelecionado]="data.idVisitaSelecionado"
+              [idPessoa]="getIdPessoa()"
+              [(pessoa)]="pessoa">
+            </app-pessoa-visita>
+          </mat-tab>
+
+        </mat-tab-group>
+
+      </mat-tab>
+
+    </mat-tab-group>
+
+  </div>
+</div>

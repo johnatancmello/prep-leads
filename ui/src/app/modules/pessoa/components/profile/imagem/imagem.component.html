@@ -1,0 +1,33 @@
+<div class="content">
+  <div class="controles">
+    <div class="controles__left">
+        <i class="material-icons controles__left__button-voltar"
+        (click)="closeEvent.emit($event)">keyboard_arrow_left</i>
+    </div>
+    <div class="controles__right">
+        <i class="material-icons controles__right__button-excluir"
+          *ngIf="!readonly"
+          (click)="deleteEvent.emit($event)">{{iconDelete}}</i>
+
+        <i class="material-icons controles__right__button-editar"
+          (click)="togglerEdit($event)">{{getIconEdit()}}</i>
+    </div>
+  </div>
+
+  <div class="capa"></div>
+
+  <div class="moldura">
+
+    <img class="moldura__imagem" *ngIf="imagem"
+      [src]="getBase64()">
+
+    <i class="material-icons moldura__icon" *ngIf="!imagem">person</i>
+
+    <div class="moldura__button" *ngIf="!readonly">
+      <div class="moldura__button__text"
+        (click)="loadImagem($event)">Alterar
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,11 @@
+@import url("../../../shared/css/sheet.css");
+
+.tipo-select{
+  display: block;
+  margin-bottom: -20px;
+  width: 100%;
+}
+
+.modulos-content{
+  padding: 10px 0;
+}

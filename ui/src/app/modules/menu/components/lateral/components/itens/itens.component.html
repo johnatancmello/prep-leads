@@ -1,0 +1,54 @@
+<ul class="menu-lateral">
+
+  <li class="foto">
+    <img *ngIf="imagem" [src]="getImagem()"/>
+    <i class="material-icons" *ngIf="!imagem">face</i>
+  </li>
+
+  <li class="btn-logoff default-dark--text primary-light--text--hover"
+    (click)="logout()">Sair</li>
+
+  <!--Interesses-->
+  <li class="btn primary-light--text primary-light--text--hover"
+    (click)="closeLateral.emit()"
+    routerLink="/interesses"
+    routerLinkActive="primary-light--active">Interesses</li>
+
+  <!--agendamentos-->
+  <li class="btn primary-light--text primary-light--text--hover"
+    (click)="closeLateral.emit()"
+    routerLink="/agendamentos"
+    routerLinkActive="primary-light--active">Agendamentos</li>
+
+  <!--Alunos-->
+  <li class="btn primary-light--text primary-light--text--hover"
+    (click)="closeLateral.emit()"
+    routerLink="/alunos"
+    routerLinkActive="primary-light--active">Alunos</li>
+
+  <!--Pessoas-->
+  <li class="btn primary-light--text primary-light--text--hover"
+    (click)="closeLateral.emit()"
+    routerLink="/pessoas"
+    routerLinkActive="primary-light--active">Pessoas</li>
+
+  <!--Funcionarios-->
+  <li class="btn primary-light--text primary-light--text--hover"
+    (click)="closeLateral.emit()"
+    routerLink="/funcionarios"
+    routerLinkActive="primary-light--active">Funcionarios</li>
+
+  <!--Sertores-->
+  <li class="btn primary-light--text primary-light--text--hover"
+    (click)="closeLateral.emit()"
+    routerLink="/setores"
+    routerLinkActive="primary-light--active">Setores</li>
+
+</ul>
+
+<ul class="menu-rodape">
+  <li class="fullscreen">
+    <i class="material-icons primary-light--text primary-light--text--hover" (click)="openFullscreen()">fullscreen</i>
+  </li>
+</ul>
+

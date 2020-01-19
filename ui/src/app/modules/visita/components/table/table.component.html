@@ -1,0 +1,98 @@
+<div class="table">
+
+  <mat-table class="table" [dataSource]="visitas">
+
+    <!-- ID -->
+    <ng-container matColumnDef="id">
+        <mat-header-cell class="btn-filter" *matHeaderCellDef>
+          Id
+        </mat-header-cell>
+        <mat-cell *matCellDef="let element"
+          class="table__cell"
+          data-label="Id"
+          (click)="openDialogDetails.emit(element)">
+          {{element.id}}
+        </mat-cell>
+      </ng-container>
+
+    <!-- STATUS -->
+    <ng-container matColumnDef="status">
+      <mat-header-cell class="btn-filter" *matHeaderCellDef>
+        Status
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element"
+        class="table__cell"
+        data-label="Status"
+        (click)="openDialogDetails.emit(element)">
+        {{element.status}}
+      </mat-cell>
+    </ng-container>
+    Cadastro
+    <!-- PESSOA -->
+    <ng-container matColumnDef="pessoa">
+      <mat-header-cell class="btn-filter" *matHeaderCellDef>
+        pessoa
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element"
+        class="table__cell"
+        data-label="Pessoa"
+        (click)="openDialogDetails.emit(element)">
+        {{getFirstAndLastName(element.pessoa.nome)}}
+      </mat-cell>
+    </ng-container>
+
+    <!-- OBS -->
+    <!--<ng-container matColumnDef="observacao">
+      <mat-header-cell class="btn-filter" *matHeaderCellDef>
+        Observação
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element"
+        class="table__cell"
+        data-label="Observação"
+        (click)="openDialogDetails.emit(element)">
+        {{element.observacao}}
+      </mat-cell>
+    </ng-container>-->
+
+    <!-- DATA -->
+    <ng-container matColumnDef="dataDoAgendamento">
+      <mat-header-cell class="btn-filter" *matHeaderCellDef>
+        Agendamento
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element"
+        class="table__cell"
+        data-label="Agendamento"
+        (click)="openDialogDetails.emit(element)">
+        {{element.dataDoAgendamento | date: "d MMM/yy HH:mm"}}
+      </mat-cell>
+    </ng-container>
+
+    <!-- FUNCIONARIO -->
+    <ng-container matColumnDef="funcionario">
+      <mat-header-cell class="btn-filter" *matHeaderCellDef>
+        Funcionario
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element"
+        class="table__cell"
+        data-label="Funcionario"
+        (click)="openDialogDetails.emit(element)">
+          {{getFirstAndLastName(element.funcionario.pessoa.nome)}}
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns">
+    </mat-header-row>
+    <mat-row
+      class="mat-primary-light--hover primary-light--hover"
+      [ngClass]="getClass(row.id)"
+      *matRowDef="let row; columns: displayedColumns;">
+    </mat-row>
+  </mat-table>
+
+  <mat-paginator
+    [length]="filter.totalRecords"
+    [pageSize]="filter.itensForPage"
+    [pageSizeOptions]="[7, 11, 15, 19]"
+    (page)="changePage.emit($event)">
+  </mat-paginator>
+</div>

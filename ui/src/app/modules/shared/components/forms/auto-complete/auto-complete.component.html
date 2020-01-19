@@ -1,0 +1,14 @@
+<mat-form-field class="field">
+  <input matInput
+    class="field__input"
+    type="number"
+    [placeholder]="placeholder"
+    [matAutocomplete]="auto"
+    [(ngModel)]="ngModel"
+    [readonly]="readonly">
+  <mat-autocomplete #auto="matAutocomplete">
+    <mat-option  *ngFor="let item of items" [value]="item.value">
+      {{item.label}}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>

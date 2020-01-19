@@ -1,0 +1,37 @@
+.fab-container {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: flex-end;
+}
+.fab-container > div.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+}
+.fab-container > div.column button {
+  margin-top: 17px;
+}
+.fab-container > div.column-reverse {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+.fab-container > div.column-reverse button {
+  margin-bottom: 17px;
+}
+.fab-toggler {
+  float: right;
+  z-index: 100;
+}
+#fab-dismiss {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+}

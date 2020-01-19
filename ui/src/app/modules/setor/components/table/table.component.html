@@ -1,0 +1,46 @@
+<div class="mat-elevation-z8 content">
+
+  <mat-table class="table" [dataSource]="setores">
+
+    <!-- ID -->
+    <!--
+    <ng-container matColumnDef="id">
+      <mat-header-cell class="btn-filter" *matHeaderCellDef>
+        Id
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element"
+        data-label="ID"
+        (click)="openDialog(element)">
+        {{element.id}}
+      </mat-cell>
+    </ng-container>-->
+
+    <!-- NOME -->
+    <ng-container matColumnDef="nome">
+      <mat-header-cell class="btn-filter" *matHeaderCellDef>
+        Nome
+      </mat-header-cell>
+      <mat-cell *matCellDef="let element"
+        class="table__nome__cell"
+        data-label="Nome"
+        (click)="openDialog(element)">
+        {{element.nome}}
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns">
+    </mat-header-row>
+    <mat-row
+      *matRowDef="let row; columns: displayedColumns;"
+      class="table__row">
+    </mat-row>
+  </mat-table>
+
+  <mat-paginator
+    [length]="length"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="[4, 8, 12, 16]"
+    (page)="changePage.emit($event)">
+  </mat-paginator>
+
+</div>

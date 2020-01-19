@@ -1,0 +1,12 @@
+<app-menu-navbar
+  (burguerEvent)="toggleBar()"
+  *ngIf="authService.isLogged()">
+</app-menu-navbar>
+
+<app-menu-lateral
+  [classContraBar]="animacaoContraBar"
+  [classLateralBar]="animacaoLateralBar"
+  *ngIf="visibleLateralBar"
+  [hidden]="!authService.isLogged()"
+  (closeLateral)="toggleBar()">
+</app-menu-lateral>

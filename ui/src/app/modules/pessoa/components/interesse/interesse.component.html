@@ -1,0 +1,19 @@
+<div class="form content">
+  <div class="form__content">
+    <div class="form__content__box">
+      <app-interesse-table
+        [interesses]="interesses"
+        [filter]="filter"
+        [idInteresseSelecionado]="idInteresseSelecionado"
+        (changePage)="changePage($event)"
+        (openDialogDetails)="openDialogInteresse($event)">
+      </app-interesse-table>
+
+      <div class="add-button">
+        <button mat-fab (click)="openDialogInteresse()">
+            <i class="material-icons">add</i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

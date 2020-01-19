@@ -1,0 +1,21 @@
+<div class="form p-grid">
+
+  <div class="form__content p-col-12 p-sm-12 p-md-6 p-lg-6 p-xl-6"
+    *ngIf="(funcionario.usuario)">
+    <app-funcionario-form-usuario
+      class="form__content__box"
+      [usuario]="funcionario.usuario"
+      [readonly]="readonly">
+    </app-funcionario-form-usuario>
+  </div>
+
+  <div class="form__content p-col-12 p-sm-12 p-md-6 p-lg-6 p-xl-6"
+    *ngIf="(funcionario.setor)">
+    <app-setor-form-setor
+      class="form__content__box"
+      [setor]="funcionario.setor"
+      [readonly]="readonly">
+    </app-setor-form-setor>
+  </div>
+
+</div>

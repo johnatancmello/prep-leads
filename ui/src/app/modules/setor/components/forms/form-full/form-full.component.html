@@ -1,0 +1,32 @@
+<div class="content p-grid">
+
+  <div class="p-col-12 p-sm-12 p-md-6 p-lg-6 p-xl-6 form-box">
+
+    <div class="p-grid">
+      <app-shared-input
+        ngDefaultControl
+        class="p-col-12 p-sm-12 p-md-6 p-lg-6 p-xl-6"
+        [placeholder]="'Setor'"
+        [(ngModel)]="setor.nome"
+        [readonly]="readonly">
+      </app-shared-input>
+      <button mat-button
+        class="button-adicionar p-col-12 p-sm-12 p-md-6 p-lg-6 p-xl-6"
+        (click)="add($event)">Adicionar</button>
+    </div>
+
+
+    <app-setor-table
+      class=""
+      [setores]="setores"
+      [pageSize]="filter.itensForPage"
+      [length]="filter.totalRecords"
+      (changePage)="changePage($event)"
+      (refresh)="pesquisar()">
+    </app-setor-table>
+
+
+  </div>
+
+
+</div>

@@ -1,0 +1,15 @@
+<mat-form-field class="field" [ngClass]="readonly ? 'readonly' : ''">
+
+    <span class="trigger" [owlDateTimeTrigger]="dt1">
+      <input matInput
+        class="field__input"
+        [owlDateTime]="dt1"
+        [placeholder]="placeholder"
+        [selectMode]="selectMode"
+        [readonly]="true"
+        [(ngModel)]="ngModel"
+        (ngModelChange)="ngModelChange.emit($event)">
+    </span>
+
+  </mat-form-field>
+  <owl-date-time [pickerType]="'both'" [pickerMode]="pickerMode" #dt1></owl-date-time>

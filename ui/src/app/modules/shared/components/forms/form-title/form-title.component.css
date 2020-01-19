@@ -1,0 +1,45 @@
+.cabecalho{
+  margin-bottom: 1.5em;
+}
+
+.column{
+  display: inline-block;
+}
+
+.left{
+  width: 25%;
+}
+
+.center{
+  width: 50%;
+  text-align: center;
+}
+
+.right{
+  width: 25%;
+  text-align: end;
+}
+
+.title{
+  font-size: 0.7em;
+  font-weight: 550;
+}
+
+.date{
+  font-size: 0.6em;
+  font-weight: 500;
+  font-family: -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif
+}
+
+.clean:hover{
+  cursor: pointer;
+}

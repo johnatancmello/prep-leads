@@ -1,0 +1,54 @@
+<div class="p-grid form-pessoa">
+
+  <div class="cabecalho p-col-12 p-sm-12 p-md-12 p-lg-12 p-xl-12"
+    *ngIf="titulo">
+    <app-shared-form-title
+      [title]="titulo"
+      [date]="pessoa.dataDoCadastro"
+      [clear]="clear"
+      (clean)="clean.emit($event)"></app-shared-form-title>
+  </div>
+
+  <app-shared-input class="p-col-12 p-sm-12 p-md-12 p-lg-12 p-xl-8"
+    ngDefaultControl
+    [placeholder]="'Nome'"
+    [(ngModel)]="pessoa.nome"
+    [readonly]="readonly">
+  </app-shared-input>
+
+  <app-shared-auto-complete class="p-col-6 p-sm-6 p-md-6 p-lg-6 p-xl-2"
+    ngDefaultControl
+    [items]="idades"
+    [placeholder]="'Idade'"
+    [(ngModel)]="pessoa.idade"
+    [readonly]="readonly">
+  </app-shared-auto-complete>
+
+  <app-shared-select class="p-col-6 p-sm-6 p-md-6 p-lg-6 p-xl-2"
+    ngDefaultControl
+    [placeholder]="'Sexo'"
+    [(ngModel)]="pessoa.sexo"
+    [items]="sexos"
+    [readonly]="readonly">
+  </app-shared-select>
+
+  <app-shared-input class="p-col-6 p-sm-6 p-md-6 p-lg-6 p-xl-6"
+    ngDefaultControl
+    [placeholder]="'Ocupação'"
+    [(ngModel)]="pessoa.ocupacao"
+    [readonly]="readonly">
+  </app-shared-input>
+
+  <app-shared-input class="p-col-6 p-sm-6 p-md-6 p-lg-6 p-xl-6"
+    ngDefaultControl
+    [placeholder]="'Local do Cadastro'"
+    [(ngModel)]="pessoa.localDoCadastro"
+    [readonly]="readonly">
+  </app-shared-input>
+
+  <app-pessoa-form-fone
+    class="p-col-12 p-sm-12 p-md-12 p-lg-12 p-xl-12"
+    [telefones]="pessoa.telefones"
+    [readonly]="readonly"></app-pessoa-form-fone>
+
+</div>

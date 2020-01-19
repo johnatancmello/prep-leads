@@ -1,0 +1,40 @@
+<div class="content-sheet mat-primary-light">
+
+  <app-shared-select class="tipo-select"
+    ngDefaultControl
+    [placeholder]="'Status'"
+    [(ngModel)]="contato.status"
+    [items]="status"
+    [readonly]="readonly">
+  </app-shared-select>
+
+  <app-shared-date
+    ngDefaultControl
+    *ngIf="contato.status === 'AGENDADO'"
+    [readonly]="readonly"
+    [selectMode]="'single'"
+    [readonly]="false"
+    [pickerMode]="'dialog'"
+    [pickerType]="'both'"
+    [placeholder]="'Data do Agendamento'"
+    [(ngModel)]="contato.visita.dataDoAgendamento">
+  </app-shared-date>
+
+  <app-shared-text-area
+    ngDefaultControl
+    [placeholder]="'Observação'"
+    [(ngModel)]="contato.observacao"
+    [readonly]="readonly">
+  </app-shared-text-area>
+
+  <div class="sheet__button-content">
+
+    <button mat-flat-button
+      *ngIf="visibleBtnSave()"
+      (click)="switch()">
+      <i class="material-icons">done</i>
+    </button>
+
+  </div>
+
+</div>

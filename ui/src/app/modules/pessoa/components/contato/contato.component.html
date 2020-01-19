@@ -1,0 +1,21 @@
+<div class="form content">
+  <div class="form__content">
+    <div class="form__content__box">
+
+      <app-contato-table
+        [idContatoSelecionado]="idContatoSelecionado"
+        [contatos]="contatos"
+        [filter]="filter"
+        (changePage)="changePage($event)"
+        (openDialogDetails)="openDialogContato($event)">
+      </app-contato-table>
+
+      <!--<div class="add-button">
+        <button mat-fab (click)="openDialogAdd()">
+            <i class="material-icons">add</i>
+        </button>
+      </div>-->
+
+    </div>
+  </div>
+</div>

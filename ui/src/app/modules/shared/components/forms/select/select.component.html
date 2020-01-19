@@ -1,0 +1,11 @@
+<mat-form-field class="field" [ngClass]="readonly ? 'readonly' : ''">
+  <mat-label>{{placeholder}}</mat-label>
+  <mat-select class="field__input"
+    [(ngModel)]="ngModel"
+    (ngModelChange)="ngModelChange.emit($event)">
+    <mat-option
+      *ngFor="let item of items" [value]="item.value">
+      <label>{{item.label}}</label>
+    </mat-option>
+  </mat-select>
+</mat-form-field>

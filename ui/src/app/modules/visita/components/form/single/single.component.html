@@ -1,0 +1,12 @@
+<div class="form content">
+  <div class="form__content">
+    <div class="form__content__box">
+      <app-visita-table
+        [visitas]="visitas"
+        [filter]="filter"
+        (changePage)="changePage($event)"
+        (openDialogDetails)="switchMotor($event)">
+      </app-visita-table>
+    </div>
+  </div>
+</div>

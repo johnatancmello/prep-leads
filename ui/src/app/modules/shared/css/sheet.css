@@ -1,0 +1,13 @@
+.content-sheet{
+  display: block;
+  padding-top: 5px;
+  width: 100%;
+  font-size: 1.4em;
+}
+
+.sheet__button-content > button{
+  display: block;
+  padding: 0.5em 0;
+  margin: 0.5em 0;
+  width: 100%;
+}

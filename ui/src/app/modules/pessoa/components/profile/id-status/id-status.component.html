@@ -1,0 +1,8 @@
+<div class="content">
+
+  <label class="titulo titulo-status"
+    [ngClass]="{ 'titulo-status--active' : !readonly }"
+    (click)="togglerStatus()">{{getStatus()}}</label>
+  <label class="titulo titulo-id">{{getId()}}</label>
+
+</div>

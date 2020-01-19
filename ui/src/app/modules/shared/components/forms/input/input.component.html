@@ -1,0 +1,11 @@
+<mat-form-field class="field" [ngClass]="readonly ? 'readonly' : ''">
+  <input matInput
+    class="field__input"
+    [type]="type"
+    autocomplete="off"
+    [placeholder]="placeholder"
+    [(ngModel)]="ngModel"
+    [readonly]="readonly"
+    (keydown.enter)="keydownEnter.emit($event)"
+    (ngModelChange)="ngModelChange.emit($event)">
+</mat-form-field>

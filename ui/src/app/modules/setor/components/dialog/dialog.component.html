@@ -1,0 +1,23 @@
+<div class="content">
+  <h3 mat-dialog-title>
+    Setor
+  </h3>
+
+  <mat-dialog-content class="mat-typography">
+    <div class="p-grid">
+        <app-shared-input class="input-nome p-col-12 p-sm-12 p-md-12 p-lg-12 p-xl-12"
+        ngDefaultControl
+        [placeholder]="'Setor'"
+        [(ngModel)]="data.setor.nome"
+        [readonly]="readonly">
+      </app-shared-input>
+    </div>
+    {{setor | json}}
+  </mat-dialog-content>
+
+  <mat-dialog-actions align="center">
+    <button mat-button mat-dialog-close>Cancelar</button>
+    <button mat-button *ngIf="!readonly" (click)="excluir($event)" >Excluir</button>
+    <button mat-button (click)="toggleReadonly($event)">{{textButtonSaveEdit}}</button>
+  </mat-dialog-actions>
+</div>
