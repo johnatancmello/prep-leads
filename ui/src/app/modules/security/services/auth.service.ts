@@ -4,9 +4,9 @@ import { Router } from '@angular/router';
 
 import { JwtHelperService } from '@auth0/angular-jwt';
 
-import { Usuario } from '../../funcionario/models/usuario';
 import { environment } from '../../../../environments/environment';
 import {BehaviorSubject} from 'rxjs';
+import {Usuario} from '../models/usuario';
 
 @Injectable({
   providedIn: 'root'

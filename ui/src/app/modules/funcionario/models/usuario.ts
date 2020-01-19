@@ -1,4 +1,4 @@
-import { Permissao } from '../../seguranca/models/permissao';
+import {Permissao} from '../../security/models/permissao';
 
 export class Usuario {
   public idUsuario: string;

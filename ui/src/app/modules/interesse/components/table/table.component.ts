@@ -33,6 +33,8 @@ export class InteresseTableComponent implements OnInit {
   public getClass(idRow: number): string {
     if (this.idInteresseSelecionado === idRow) {
       return 'mat-primary-dark primary-light--active';
+    } else {
+      return '';
     }
   }
 }

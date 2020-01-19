@@ -70,8 +70,8 @@
     <mat-header-row *matHeaderRowDef="displayedColumns">
     </mat-header-row>
     <mat-row
-      class="mat-primary-light--hover primary-light--hover"
       [ngClass]="getClass(row.id)"
+      class="mat-primary-light--hover primary-light--hover"
       *matRowDef="let row; columns: displayedColumns;">
     </mat-row>
   </mat-table>

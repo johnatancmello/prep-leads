@@ -2,13 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpParams, HttpHeaders, HttpHandler } from '@angular/common/http';
 
 import { SegurancaHttpInterceptService } from './http-intercept.service';
-import { SecurityOauthService } from 'src/app/modules/seguranca/services/auth.service';
-import { NavBarService } from '../../menu/services/nav-bar.service';
+import {SecurityOauthService} from './auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class SegurancaHttpService extends SegurancaHttpInterceptService {
+export class SecutiryHttpService extends SegurancaHttpInterceptService {
 
   public headers = new HttpHeaders().append('Content-Type', 'application/json');
 

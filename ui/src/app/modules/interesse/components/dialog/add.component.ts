@@ -16,15 +16,15 @@ import { InteresseFilter } from '../../models/interesse.filter';
 import { InteresseService } from '../../services/interesse.service';
 import { SharedHandlerMensageService } from '../../../shared/services/error/handler-mensage.service';
 import { NavBarService } from '../../../menu/services/nav-bar.service';
-import { SegurancaLoggedService } from '../../../seguranca/services/logged.service';
 import { Interesse } from '../../models/interesse';
 import { ContatoDialogComponent } from '../../../contato/components/dialog/dialog.component';
 import { EventEmitterService } from '../../../shared/services/broadcaster/event-emitter';
 import { Funcionario } from 'src/app/modules/funcionario/models/funcionarios';
 import { Events } from 'src/app/modules/shared/services/broadcaster/events';
-import { CursoPainelFormacaoComponent } from 'src/app/modules/curso/components/painel-formacao/painel-formacao.component';
 import { Item } from '../../../shared/models/item';
 import { InteresseTipos } from '../../models/interesse.status';
+import {FuncionarioLoggedService} from '../../../funcionario/services/logged.service';
+import {CursoPainelFormacaoComponent} from '../../../curso/components/painel-formacao/painel-formacao.component';
 
 @Component({
   selector: 'app-pessoa-interesse-dialog-add',
@@ -44,7 +44,7 @@ export class InteresseDialogAddComponent implements OnInit {
     private interesseService: InteresseService,
     private handlerMensage: SharedHandlerMensageService,
     private navBarService: NavBarService,
-    private logged: SegurancaLoggedService,
+    private logged: FuncionarioLoggedService,
     private changeDetectorRef: ChangeDetectorRef,
     private dialog: MatDialog,
     private bottomSheet: MatBottomSheet,

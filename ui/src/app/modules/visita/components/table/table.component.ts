@@ -31,7 +31,7 @@ export class VisitaTableComponent implements OnInit {
 
   public getClass(idRow: number): string {
     if (this.idVisitaSelecionado === idRow) {
-      return 'mat-primary-dark primary-light--active';
+      return 'mat-primary-light primary-light--active';
     }
   }
 

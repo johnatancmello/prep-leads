@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 
 import { HttpParams } from '@angular/common/http';
-import { SegurancaHttpService } from '../../seguranca/services/http.service';
 import { Interesse } from '../models/interesse';
+import {SecutiryHttpService} from '../../security/services/http.service';
 
 
 @Injectable({
@@ -12,7 +12,7 @@ export class InteresseService {
 
   private location = '/interesses';
 
-  constructor(private http: SegurancaHttpService) { }
+  constructor(private http: SecutiryHttpService) { }
 
   adicionar(interesse: Interesse): Promise<any> {
     return this.http.adicionar(interesse, this.location);

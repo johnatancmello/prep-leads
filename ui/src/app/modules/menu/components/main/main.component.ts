@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-import { SecurityOauthService } from 'src/app/modules/seguranca/services/auth.service';
+import {SecurityOauthService} from '../../../security/services/auth.service';
 
 @Component({
   selector: 'app-menu-main',

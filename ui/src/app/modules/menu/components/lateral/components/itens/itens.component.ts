@@ -1,9 +1,9 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Imagem } from '../../../../../pessoa/models/imagem';
-import { SegurancaLoggedService } from 'src/app/modules/seguranca/services/logged.service';
-import { SecurityOauthService } from 'src/app/modules/seguranca/services/auth.service';
 import { Router } from '@angular/router';
 import { SharedHandlerMensageService } from 'src/app/modules/shared/services/error/handler-mensage.service';
+import {FuncionarioLoggedService} from '../../../../../funcionario/services/logged.service';
+import {SecurityOauthService} from '../../../../../security/services/auth.service';
 
 @Component({
   selector: 'app-menu-lateral-itens',
@@ -17,7 +17,7 @@ export class MenuLateralItensComponent implements OnInit {
   public imagem;
 
   constructor(
-    private logged: SegurancaLoggedService,
+    private logged: FuncionarioLoggedService,
     private auth: SecurityOauthService,
     private router: Router,
     private handlerMensage: SharedHandlerMensageService,

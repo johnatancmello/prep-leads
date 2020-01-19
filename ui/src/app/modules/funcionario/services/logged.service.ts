@@ -3,14 +3,14 @@ import { Injectable } from '@angular/core';
 import { JwtHelperService } from '@auth0/angular-jwt';
 
 import { FuncionarioService } from 'src/app/modules/funcionario/services/funcionario.service';
-import { Funcionario } from '../../funcionario/models/funcionarios';
+import { Funcionario } from '../models/funcionarios';
 import { ImagemFilter } from '../../pessoa/models/imagem.filter';
 import { ImagemService } from '../../pessoa/services/imagem.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class SegurancaLoggedService {
+export class FuncionarioLoggedService {
 
   private funcionario;
 

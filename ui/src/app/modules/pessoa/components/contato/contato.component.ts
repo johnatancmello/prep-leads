@@ -5,7 +5,6 @@ import { ContatoFilter } from '../../../contato/models/contato.filter';
 import { ContatoService } from '../../../contato/services/contato.service';
 import { EventEmitterService } from '../../../shared/services/broadcaster/event-emitter';
 import { Contato } from '../../../contato/models/contatos';
-import { SegurancaLoggedService } from '../../../seguranca/services/logged.service';
 import { Funcionario } from '../../../funcionario/models/funcionarios';
 import { NavBarService } from '../../../menu/services/nav-bar.service';
 import { SharedHandlerMensageService } from '../../../shared/services/error/handler-mensage.service';
@@ -13,6 +12,8 @@ import { Events } from 'src/app/modules/shared/services/broadcaster/events';
 import { MatBottomSheet } from '@angular/material';
 import { ContatoDialogComponent } from '../../../contato/components/dialog/dialog.component';
 import { Subscription } from 'rxjs';
+
+import {FuncionarioLoggedService} from '../../../funcionario/services/logged.service';
 
 @Component({
   selector: 'app-pessoa-contato',
@@ -33,7 +34,7 @@ export class PessoaContatoComponent implements OnInit, OnDestroy {
     private contatoService: ContatoService,
     private navBarService: NavBarService,
     private handlerMensage: SharedHandlerMensageService,
-    private logged: SegurancaLoggedService,
+    private logged: FuncionarioLoggedService,
     private bottomSheet: MatBottomSheet,
   ) {
     this.subscription = EventEmitterService

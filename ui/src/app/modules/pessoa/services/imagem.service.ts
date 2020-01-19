@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { Imagem } from '../models/imagem';
 import { HttpParams } from '@angular/common/http';
-import { SegurancaHttpService } from '../../seguranca/services/http.service';
+import {SecutiryHttpService} from '../../security/services/http.service';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ export class ImagemService {
 
   private location = '/imagens';
 
-  constructor(private http: SegurancaHttpService) { }
+  constructor(private http: SecutiryHttpService) { }
 
   adicionar(imagen: Imagem): Promise<any> {
     return this.http.adicionar(imagen, this.location);

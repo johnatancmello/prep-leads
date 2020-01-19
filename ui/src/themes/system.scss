@@ -48,7 +48,7 @@
 .mat-primary-dark{
   @include angular-material-theme($dark-theme);
 }
-.mat-primary-dark:hover{
+.mat-primary-dark--hover:hover{
   @include angular-material-theme($my-theme);
 }
 .primary-dark{

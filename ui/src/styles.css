@@ -1,0 +1,229 @@
+/* You can add global styles to this file, and also import other style files */
+
+html {
+  font-size: 0.625rem;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+}
+
+/*--------------------------*\
+  Correcao da grid
+\*--------------------------*/
+.p-grid, .p-col-1, .p-col-2, .p-col-3, .p-col-4, .p-col-5, .p-col-6, .p-col-7, .p-col-8, .p-col-9, .p-col-10, .p-col-11, .p-col-12 {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*--------------------------*\
+  Correcao da grid
+\*--------------------------*/
+
+
+
+/*--------------------------*\
+  config Button
+  material size
+  medida relativa
+\*--------------------------*/
+button.mat-button {
+  min-width: 6.4em;
+  min-height: 3.6em;
+  line-height: 3em;
+  padding: 0.4em 2em;
+  font-size: 1.4em;
+}
+/*--------------------------*\
+  config Button
+  material size
+  medida relativa
+\*--------------------------*/
+
+
+/*--------------------------*\
+  config overlay
+  material size
+  medida relativa
+\*--------------------------*/
+.cdk-overlay-pane .owl-dt-container-inner {
+  font-size: 1.8rem;
+}
+mat-bottom-sheet-container.mat-bottom-sheet-container {
+  min-width: auto;
+}
+/*--------------------------*\
+  config overlay
+  material size
+  medida relativa
+\*--------------------------*/
+
+
+/*--------------------------*\
+  config multiselect
+  material size
+  medida relativa
+\*--------------------------*/
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value {
+  background-color: #454a63;
+}
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value .ng-value-label{
+  font-size:1em;
+}
+ng-select.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value {
+  white-space: normal;
+}
+/*--------------------------*\
+  config multiselect
+  material size
+  medida relativa
+\*--------------------------*/
+
+
+/*--------------------------*\
+  config Tab
+  material size
+  medida relativa
+\*--------------------------*/
+.mat-tab-label, .mat-tab-link {
+  font-size: 1em;
+}
+.mat-tab-header{
+  background-color: #fff;
+}
+@media screen and (min-width: 961px) {
+  mat-dialog-content.mat-dialog-content{
+    max-width: 913px;
+  }
+}
+/*--------------------------*\
+  config Tab
+  material size
+  medida relativa
+\*--------------------------*/
+
+/*--------------------------*\
+  config table material size
+  medida relativa
+\*--------------------------*/
+.mat-table .mat-cell,
+.mat-table .mat-header-cell,
+mat-paginator.mat-paginator,
+mat-paginator.mat-paginator .mat-paginator-page-size .mat-select-trigger,
+mat-paginator.mat-paginator .mat-paginator-icon{
+  font-size: 1em;
+}
+mat-paginator.mat-paginator .mat-paginator-icon{
+  width: 2.6rem;
+}
+mat-paginator.mat-paginator .mat-paginator-page-size-select {
+  min-width: 30px;;
+  width: 3em;
+}
+.mat-paginator{
+  background-color: transparent;
+}
+@media screen and (max-width: 960px) {
+  .mat-table {
+    border: 0;
+    vertical-align: middle;
+  }
+
+  .mat-table caption {
+    font-size: 1em;
+  }
+
+  .mat-table .mat-header-row{
+    display: none;
+  }
+
+  /*  Enable this to hide header
+  .mat-table .mat-header-cell {
+
+    border: 10px solid;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  */
+  .mat-table .mat-row {
+    border-bottom: 5px solid #ddd;
+    display: block;
+    padding: 0 16px;
+  }
+  .mat-table .mat-row::after{
+    display: none;
+  }
+  /*
+  .mat-table .mat-row:nth-child(even) {background: #CCC}
+  .mat-table .mat-row:nth-child(odd) {background: #FFF}
+  */
+  .mat-table .mat-cell {
+    border-bottom: 1px solid #ddd;
+    display: block;
+
+    text-align: right;
+    font-weight: bold;
+    min-height: 0;
+    margin-bottom: 0%;
+    padding: 1em 0;
+  }
+  .mat-table .mat-cell:before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    text-transform: uppercase;
+    font-weight: normal;
+
+    font-size: .85em;
+  }
+  .mat-table .mat-cell:last-child {
+    border-bottom: 0;
+    padding-bottom: 1.5em;
+  }
+  .mat-table .mat-cell:first-child {
+    margin-top: 0%;
+    padding-top: 1.5em;
+  }
+  .mat-cell:first-of-type{
+    padding-left: 0;
+  }
+  .mat-cell:last-of-type{
+    padding-right: 0;
+  }
+  mat-paginator.mat-paginator .mat-paginator-range-label{
+    margin: 0;
+  }
+
+}
+@media screen and (min-width: 961px) {
+  .mat-table{
+    /* min-width: 720.8px;*/
+  }
+}
+/*--------------------------*\
+  config table material size
+  medida relativa
+\*--------------------------*/
+
+/*--------------------------*\
+  config cropper-img
+  medida relativa
+\*--------------------------*/
+.cropper span.ng2-imgcrop canvas.edit{
+  width: 100%;
+}
+/*--------------------------*\
+  config cropper-img
+  medida relativa
+\*--------------------------*/

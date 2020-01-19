@@ -1,0 +1,51 @@
+.form {
+  /* Posicionamento */
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  /* Display e Box Model */
+  width: 23em;
+  height: 37em;
+  margin: auto;
+  padding: 0;
+  /* cores */
+  /*background-color: #999;*/
+  /* textos */
+  /* Outros */
+}
+
+.form__field-usuario,
+.form__field-senha,
+.form__titulo, form__field-entrar {
+  display: block;
+}
+
+.form__titulo {
+  width: 100%;
+  margin-bottom: 1.4em;
+  text-align: center;
+  font-size: 3.5em;
+  font-family: Roboto, sans-serif;
+}
+
+.form__field-usuario,
+.form__field-senha {
+  font-size: 2.5em;
+}
+
+.form__field-usuario {
+  animation-delay: 0.05s;
+}
+
+.form__field-senha {
+  animation-delay: 0.1s;
+}
+
+.form__field-entrar{
+  width: 100%;
+  letter-spacing: 2px;
+  font-size: 2.5em;
+  animation-delay: 0.2s;
+}

@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpParams } from '@angular/common/http';
 
-import { SegurancaHttpService } from '../../seguranca/services/http.service';
 import { Aluno } from '../models/aluno';
+import {SecutiryHttpService} from '../../security/services/http.service';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ export class AlunoService {
 
   private location = '/alunos';
 
-  constructor(private http: SegurancaHttpService) { }
+  constructor(private http: SecutiryHttpService) { }
 
   adicionar(aluno: Aluno): Promise<any> {
     return this.http.adicionar(aluno, this.location);

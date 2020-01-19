@@ -9,9 +9,9 @@ import { SharedHandlerMensageService } from '../../../../shared/services/error/h
 import { NavBarService } from '../../../../menu/services/nav-bar.service';
 import { Pessoa } from 'src/app/modules/pessoa/models/pessoa';
 import { AlunoDialogComponent } from '../../dialog/dialog.component';
-import { SegurancaLoggedService } from 'src/app/modules/seguranca/services/logged.service';
 import { EventEmitterService } from '../../../../shared/services/broadcaster/event-emitter';
 import { Events } from 'src/app/modules/shared/services/broadcaster/events';
+import {FuncionarioLoggedService} from '../../../../funcionario/services/logged.service';
 
 @Component({
   selector: 'app-aluno-table-card',
@@ -30,7 +30,7 @@ export class AlunoTableCardComponent implements OnInit, OnDestroy {
     private alunoService: AlunoService,
     private handlerMensage: SharedHandlerMensageService,
     private navBarService: NavBarService,
-    private logged: SegurancaLoggedService,
+    private logged: FuncionarioLoggedService,
   ) {
     this.subscription = EventEmitterService
       .get(Events.alunosChange)
@@ -68,9 +68,9 @@ export class AlunoTableCardComponent implements OnInit, OnDestroy {
   }
 
   private getPessoas() {
-    /*return this.alunos.map(f => {
+    return this.alunos.map(f => {
       return f.pessoa;
-    });*/
+    });
   }
 
   private getAlunoByPessoa(pessoa: Pessoa): Aluno {

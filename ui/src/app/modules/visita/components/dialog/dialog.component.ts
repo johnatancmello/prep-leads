@@ -2,7 +2,6 @@ import { Component, OnInit, ChangeDetectorRef, Inject } from '@angular/core';
 import { VisitaService } from '../../services/visita.service';
 import { NavBarService } from '../../../menu/services/nav-bar.service';
 import { SharedHandlerMensageService } from '../../../shared/services/error/handler-mensage.service';
-import { SegurancaLoggedService } from '../../../seguranca/services/logged.service';
 import { ContatoDialogComponent } from '../../../contato/components/dialog/dialog.component';
 import { MatBottomSheetRef, MAT_BOTTOM_SHEET_DATA } from '@angular/material';
 import { Visita } from '../../models/visita';
@@ -10,6 +9,7 @@ import { Item } from '../../../shared/models/item';
 import { EventEmitterService } from '../../../shared/services/broadcaster/event-emitter';
 import { Events } from 'src/app/modules/shared/services/broadcaster/events';
 import { VisitaStatus } from '../../models/visita.status';
+import {FuncionarioLoggedService} from '../../../funcionario/services/logged.service';
 
 @Component({
   selector: 'app-visita-dialog',
@@ -26,7 +26,7 @@ export class VisitaDialogComponent implements OnInit {
     private visitaService: VisitaService,
     private navBarService: NavBarService,
     private handlerMensage: SharedHandlerMensageService,
-    private logged: SegurancaLoggedService,
+    private logged: FuncionarioLoggedService,
     private bottomSheetRef: MatBottomSheetRef<ContatoDialogComponent>,
     private changeDetectorRef: ChangeDetectorRef,
     @Inject(MAT_BOTTOM_SHEET_DATA) public data: any,

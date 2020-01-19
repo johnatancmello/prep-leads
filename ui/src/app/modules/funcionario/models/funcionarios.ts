@@ -1,7 +1,7 @@
 import { Usuario } from './usuario';
 import { Pessoa } from '../../pessoa/models/pessoa';
 import { Setor } from '../../setor/models/setor';
-import { Meta } from '@angular/platform-browser';
+import {Meta} from './meta';
 
 export class Funcionario {
   public id: number;

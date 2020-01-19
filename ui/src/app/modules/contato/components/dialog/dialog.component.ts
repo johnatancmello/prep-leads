@@ -6,12 +6,13 @@ import { Item } from '../../../shared/models/item';
 import { ContatoService } from '../../services/contato.service';
 import { NavBarService } from 'src/app/modules/menu/services/nav-bar.service';
 import { SharedHandlerMensageService } from 'src/app/modules/shared/services/error/handler-mensage.service';
-import { SegurancaLoggedService } from 'src/app/modules/seguranca/services/logged.service';
+
 import { Visita } from '../../../visita/models/visita';
 import { EventEmitterService } from '../../../shared/services/broadcaster/event-emitter';
 import { Events } from 'src/app/modules/shared/services/broadcaster/events';
 import { Contato } from '../../models/contatos';
 import { ContatoStatus } from '../../models/contato.status';
+import {FuncionarioLoggedService} from '../../../funcionario/services/logged.service';
 
 @Component({
   selector: 'app-contato-dialog',
@@ -29,7 +30,7 @@ export class ContatoDialogComponent implements OnInit {
     // private visitaService: VisitaService,
     private navBarService: NavBarService,
     private handlerMensage: SharedHandlerMensageService,
-    private logged: SegurancaLoggedService,
+    private logged: FuncionarioLoggedService,
     private bottomSheetRef: MatBottomSheetRef<ContatoDialogComponent>,
     private changeDetectorRef: ChangeDetectorRef,
     @Inject(MAT_BOTTOM_SHEET_DATA) public data: any,

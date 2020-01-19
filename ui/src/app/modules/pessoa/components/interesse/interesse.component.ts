@@ -8,15 +8,12 @@ import { InteresseFilter } from '../../../interesse/models/interesse.filter';
 import { InteresseService } from '../../../interesse/services/interesse.service';
 import { NavBarService } from '../../../menu/services/nav-bar.service';
 import { SharedHandlerMensageService } from '../../../shared/services/error/handler-mensage.service';
-import { SegurancaLoggedService } from '../../../seguranca/services/logged.service';
 import { Pessoa } from '../../models/pessoa';
 import { Interesse } from 'src/app/modules/interesse/models/interesse';
 import { Funcionario } from 'src/app/modules/funcionario/models/funcionarios';
 import { InteresseDialogAddComponent } from '../../../interesse/components/dialog/add.component';
 import { EventEmitterService } from '../../../shared/services/broadcaster/event-emitter';
 import { Events } from 'src/app/modules/shared/services/broadcaster/events';
-
-
 
 @Component({
   selector: 'app-pessoa-interesse',

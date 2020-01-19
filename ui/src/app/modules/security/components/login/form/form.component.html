@@ -1,0 +1,33 @@
+<div class="form animated" [ngClass]="classCSS">
+
+  <label class="form__titulo">{{getSaudacaoLogin()}}</label>
+
+  <mat-form-field class="form__field-usuario animated bounceInLeft">
+    <input matInput
+           ngDefaultControl
+           #usuarioInput
+           type="text"
+           [readonly]="readonly"
+           [(ngModel)]="usuario.idUsuario"
+           placeholder="Usuário"
+           autocomplete="off"
+           (keyup.enter)="senhaInput.focus()">
+  </mat-form-field>
+
+  <mat-form-field class="form__field-senha animated bounceInLeft">
+    <input matInput
+           ngDefaultControl
+           #senhaInput
+           [readonly]="readonly"
+           [(ngModel)]="usuario.senha"
+           type="password"
+           placeholder="Senha"
+           [disabled]="disable"
+           (keyup.enter)="logar()">
+  </mat-form-field>
+
+  <button mat-button
+          class="form__field-entrar animated bounceInLeft"
+          (click)="logar()">Entrar</button>
+
+</div>

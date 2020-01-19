@@ -1,8 +1,8 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
-import { SecurityOauthService } from 'src/app/modules/seguranca/services/auth.service';
 import { NavBarService } from '../../services/nav-bar.service';
 import { Router } from '@angular/router';
+import {SecurityOauthService} from '../../../security/services/auth.service';
 
 @Component({
   selector: 'app-menu-navbar',

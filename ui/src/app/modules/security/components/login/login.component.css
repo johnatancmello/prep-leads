@@ -1,0 +1,12 @@
+.fundo {
+  /* Posicionamento */
+  position: absolute;
+  /* Display e Box Model */
+  width: 100%;
+  height: 100%;
+  /* cores */
+  /*background-color: rgb(49, 99, 119);
+  /* textos */
+  /* Outros */
+  z-index: -1;
+}

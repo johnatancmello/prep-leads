@@ -7,10 +7,10 @@ import { VisitaService } from '../../../services/visita.service';
 import { SharedHandlerMensageService } from 'src/app/modules/shared/services/error/handler-mensage.service';
 import { NavBarService } from 'src/app/modules/menu/services/nav-bar.service';
 import { MatDialog } from '@angular/material';
-import { PessoaDialogComponent } from 'src/app/modules/pessoa/components/dialog/dialog.component';
 import { EventEmitterService } from '../../../../shared/services/broadcaster/event-emitter';
 import { Events } from 'src/app/modules/shared/services/broadcaster/events';
 import { AlunoDialogComponent } from 'src/app/modules/aluno/components/dialog/dialog.component';
+import {PessoaDialogComponent} from '../../../../pessoa/components/dialog/dialog.component';
 
 @Component({
   selector: 'app-visita-single',
