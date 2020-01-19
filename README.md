@@ -2,17 +2,27 @@
 Trabalho de conclusão de curso desenvolvido para uma escolha de cursos profissionalizantes para gerenciar seus prospects.
 
 # Principais Funções:
-Registrar interesse dos propects em cursos.
-Agendar e acompanhar visitas.
-Registrar a participação de cada colaborador no processo.
-Operar em toda plataforma web com segurança.
+<p>Registrar interesse dos propects em cursos.</p>
+<p>Agendar e acompanhar visitas.</p>
+<p>Registrar a participação de cada colaborador no processo.</p>
+<p>Operar em toda plataforma web com segurança.</p>
 
-<img src="fotos/Pessoas.png">
+<p>
+  <img src="fotos/Pessoas.PNG" width="275px">
+  <img src="fotos/Perfil.PNG" width="265px">
+  <img src="fotos/Cadastro.PNG" width="247px">
+</p>
+
+<p>
+  <img src="fotos/Cursos.PNG" width="275px">
+  <img src="fotos/Agendamento.PNG" width="275px">
+  <img src="fotos/Lista de Agendamentos.PNG" width="278px">
+</p>
 
 # Tecnologias
-BD: Mysql
-Api: Spring Boot, Spring Security With Oauth2 e JPA, Flyway Migration.
-UI: Angular 8, Json e JWT.
+<p>DB: Mysql
+<p>API: Spring Boot, Spring Security With Oauth2 e JPA, Flyway Migration.
+<p>UI: Angular 8, Json e JWT.
 
 # Pré-requisitos
 Mysql, NPM, Angular 8 e Java 11
