@@ -9,12 +9,11 @@ Trabalho de conclusão de curso desenvolvido para uma escolha de cursos profissi
 
 # Principais Telas
 <p>
+  <img src="fotos/Login.PNG" width="265px">
+  <img src="fotos/Menu.PNG" width="265px">
   <img src="fotos/Pessoas.PNG" width="275px">
   <img src="fotos/Perfil.PNG" width="265px">
   <img src="fotos/Cadastro.PNG" width="247px">
-</p>
-
-<p>
   <img src="fotos/Cursos.PNG" width="275px">
   <img src="fotos/Agendamento.PNG" width="275px">
   <img src="fotos/Lista de Agendamentos.PNG" width="278px">
