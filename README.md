@@ -7,6 +7,7 @@ Trabalho de conclusão de curso desenvolvido para uma escolha de cursos profissi
 <p>Registrar a participação de cada colaborador no processo.</p>
 <p>Operar em toda plataforma web com segurança.</p>
 
+# Principais Telas
 <p>
   <img src="fotos/Pessoas.PNG" width="275px">
   <img src="fotos/Perfil.PNG" width="265px">
