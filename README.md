@@ -7,7 +7,7 @@ Agendar e acompanhar visitas.
 Registrar a participação de cada colaborador no processo.
 Operar em toda plataforma web com segurança.
 
-<img src="/fotos/pessoas.png" width="350" title="hover text">
+<img src="fotos/pessoas.png" width="350" title="Cadastro de Prospects">
 
 # Tecnologias
 BD: Mysql
