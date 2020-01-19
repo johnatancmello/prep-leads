@@ -19,22 +19,22 @@ Mysql, NPM, Angular 8 e Java 11
 
 # Começando os testes
 Com o Mysql instalado, o usuário deve ser informado no arquivo src.main.java.resources.application.properties
-...
+```
 spring.jpa.database=MYSQL
 spring.datasource.url=jdbc:mysql://localhost/empresa?createDatabaseIfNotExist=true&useTimezone=true&serverTimezone=UTC
 spring.datasource.username=root
 spring.datasource.password=123
-...
+```
 Todo o esquema do bando é montado assim que aplicação é iniciada.
 
 Pode também ser definida a origem e a porta de operação da API.
-...
+```
 prepweb.security.origin-allowed=http://localhost:4200
 server.port: 8080
-...
+```
 
 Já no Angular toda configuração fica no arquivo src.environment.ts
-...
+```
 export const environment = {
   production: true,
   protocolApi: 'http',
@@ -44,11 +44,11 @@ export const environment = {
   whitelistedDomains: [ 'localhost:8080' ],
   blacklistedRoutes: [ '/oauth/token'],
 };
-...
+```
 Basta definir o domínio e aporta desejada e executar.
-...
+```
 npm start
-...
+```
 
 # Produção
 API
