@@ -1,5 +1,5 @@
 # prep-leads
-Trabalho de conclusão de curso desenvolvido para uma escolha de cursos profissionalizantes para gerenciar seus prospects.
+Trabalho de conclusão de curso desenvolvido para uma escola de cursos profissionalizantes para gerenciar seus prospects.
 
 # Principais Funções:
 <p>Registrar interesse dos propects em cursos.</p>
